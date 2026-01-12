@@ -1,0 +1,27 @@
+{
+        local_certs
+}
+
+{$SERVICE1_DOMAIN} {
+	reverse_proxy homepage:{$SERVICE1_PORT}
+}
+
+{$SERVICE2_DOMAIN} {
+        reverse_proxy adguardhome:{$SERVICE2_PORT}
+}
+
+{$SERVICE3_DOMAIN} {
+        reverse_proxy portainer:{$SERVICE3_PORT} {
+                transport http {
+                        tls_insecure_skip_verify
+                }
+        }
+}
+
+{$SERVICE4_DOMAIN} {
+	reverse_proxy immich_server:{$SERVICE4_PORT}
+}
+
+{$SERVICE5_DOMAIN} {
+	reverse_proxy filebrowser:{$SERVICE5_PORT}
+}
