@@ -25,3 +25,7 @@
 {$SERVICE5_DOMAIN} {
 	reverse_proxy filebrowser:{$SERVICE5_PORT}
 }
+
+{$SERVICE6_DOMAIN} {
+        reverse_proxy ntfy:{$SERVICE6_PORT}
+}

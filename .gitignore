@@ -2,6 +2,10 @@
 .env
 *.env
 
+# Logs
+.log
+*.log
+
 # Runtime
 data/
 postgres/
