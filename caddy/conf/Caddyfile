@@ -29,3 +29,7 @@
 {$SERVICE6_DOMAIN} {
         reverse_proxy ntfy:{$SERVICE6_PORT}
 }
+
+{$SERVICE7_DOMAIN} {
+        reverse_proxy 10.0.0.2:{$SERVICE7_PORT}
+}

@@ -1,0 +1,11 @@
+services:
+  homeassistant:
+    container_name: ha
+    image: ghcr.io/home-assistant/home-assistant:stable
+    env_file:
+      - .env
+    volumes:
+      - ${CONFIG_DIR}:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    network_mode: host
